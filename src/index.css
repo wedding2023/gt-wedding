@@ -1,0 +1,64 @@
+.parallax {
+  width: 100vw;
+  max-width: 900px;
+  height: 40vh;
+  background-image: url("/public/app/prallax-img.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-clip: padding-box;
+  opacity: 0.5;
+  
+}
+
+
+.strip-anandkaraj-sangeetLunch {
+  width: 100vw;
+  max-width: 900px;
+  z-index: 900;
+  object-position: center;
+  height: 10vh;
+  margin-top: -10vh;
+  margin-bottom: -10vh;
+}
+
+.strip-Intro-Gala {
+  background-image: url("/public/app/Intro-bar.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 900px;
+  height: 0.5vh;
+}
+
+.strip-sangeet-gala {
+  background-image: url("/public/app/sangeetlunch-gala-bar.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 900px;
+  height: 5vh;
+}
+
+.strip-anand-sangeet{
+  background-image: url("/public/app/anand-summary-bar.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 900px;
+  height: 5vh;
+}
+
+.strip-anand-summary {
+  background-image: url("/public/app/strip.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 900px;
+  height: 5vh;
+}

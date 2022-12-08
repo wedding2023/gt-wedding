@@ -1,0 +1,470 @@
+@font-face {
+  font-family: Kashina;
+  src: url("/public/AnandPage/Kashina.ttf");
+}
+@font-face {
+  font-family: GoodVibesCyr;
+  src: url("/public/AnandPage/GoodVibesCyr.ttf");
+}
+@font-face {
+  font-family: Cinzel-Bold;
+  src: url("/public/AnandPage/Cinzel-Bold.ttf");
+}
+@font-face {
+  font-family: Hughson;
+  src: url("/public/AnandPage/Hughson-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.anand--wrap {
+  height: 100vh;
+  z-index: 800;
+}
+
+.anand {
+  width: 100vw;
+  max-width: 900px;
+  height: 100vh;
+  background-image: url("/public/AnandPage/main--bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0%;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  overflow: hidden;
+}
+
+.anand--inner--Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  height: 96%;
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 100;
+}
+
+.anand--outer--container {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 90;
+}
+
+.anand--upperText {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  place-items: center;
+  max-width: 700px;
+}
+
+.anand--upperText--bg {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 95%;
+  max-width: 600px;
+}
+
+.anand--upperText--text {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 85%;
+  max-width: 500px;
+}
+
+.anand--image {
+  width: 55%;
+  max-width: 200px;
+}
+
+.anand--inner--Container--text--one {
+  display: block;
+  text-align: center;
+  font-size: clamp(0.72rem, 10% + 0.7rem, 2.2rem);
+  font-family: Cinzel-Bold;
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+
+.anand--inner--Container--text--two {
+  display: block;
+  font-family: Kashina;
+  color: rgba(151, 119, 20, 255);
+  font-weight: lighter;
+  font-size: clamp(0.72rem, 5% + 2rem, 4.2rem);
+}
+
+.anand--inner--Container--text--three {
+  display: block;
+  text-align: center;
+  font-size: clamp(0.72rem, 20% + 0.7rem, 2.2rem);
+  font-family: Cinzel-Bold;
+  padding-bottom: 2%;
+}
+
+.anand--inner--Container--text--four {
+  display: block;
+  font-family: GoodVibesCyr;
+  color: rgba(233, 193, 64, 255);
+  font-size: clamp(0.72rem, 75% + 2rem, 3.2rem);
+}
+
+.anand--inner--Container--text--date {
+  display: block;
+  text-align: center;
+  font-size: clamp(0.72rem, 65% + 1rem, 2.5rem);
+  color: rgba(94, 154, 98, 255);
+}
+
+.anand--inner--Container--text--time {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 900px;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.anand--inner--Container--text--time--row--one--cl1,
+.anand--inner--Container--text--time--row--one--cl2,
+.anand--inner--Container--text--time--row--one--cl3,
+.anand--inner--Container--text--time--row--one--cl4,
+.anand--inner--Container--text--time--row--two--cl1,
+.anand--inner--Container--text--time--row--two--cl2,
+.anand--inner--Container--text--time--row--two--cl3,
+.anand--inner--Container--text--time--row--two--cl4 {
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.italicFont {
+  font-family: Hughson;
+  font-size: clamp(0.72rem, 80% + 1.4rem, 2rem);
+  letter-spacing: 2px;
+}
+.anandTimeFont {
+  font-size: clamp(0.72rem, 5% + 0.8rem, 1.5rem);
+}
+
+.anand--inner--Container--text--time > p {
+  text-align: left;
+  color: #506d51;
+  font-family: Cinzel-Bold;
+  line-height: 95%;
+}
+
+.anand--inner--Container--text--venue {
+  display: block;
+  text-align: center;
+  font-size: clamp(0.72rem, 10% + 0.8rem, 2.5rem);
+  color: #506d51;
+  font-family: Cinzel-Bold;
+}
+
+.anand--inner--Container--text--attire {
+  display: block;
+  text-align: center;
+  font-size: clamp(0.72rem, 1% + 0.9rem, 2.5rem);
+  color: #506d51;
+  font-family: Cinzel-Bold;
+}
+
+.flowerPetal--container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  max-width: 900px;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0.6;
+}
+
+.flowerPetals {
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 0.9;
+  }
+
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(0, 97vh);
+    opacity: 0;
+  }
+}
+/* 
+
+          media queries
+
+*/
+
+@media screen and (min-height: 659px) {
+  .anand--inner--Container {
+    gap: 0.5%;
+  }
+}
+
+@media screen and (max-height: 759px) {
+  .anand--upperText {
+    margin-top: 5%;
+  }
+
+  .anand--image {
+    width: 35%;
+  }
+
+  .anand--inner--Container {
+    gap: 0.1%;
+  }
+
+  .anand--inner--Container--text--one {
+    font-size: clamp(0.72rem, 10% + 0.7rem, 2.2rem);
+  }
+
+  .anand--inner--Container--text--two {
+    font-size: clamp(0.72rem, 35% + 2rem, 4.2rem);
+  }
+
+  .anand--inner--Container--text--three {
+    font-size: clamp(0.72rem, 20% + 0.7rem, 2.2rem);
+  }
+
+  .anand--inner--Container--text--four {
+    font-size: clamp(0.72rem, 55% + 2rem, 3.2rem);
+  }
+
+  .anand--inner--Container--text--date {
+    font-size: clamp(0.72rem, 45% + 1rem, 2.5rem);
+  }
+
+  .anand--inner--Container--text--time {
+    text-align: center;
+    width: 100%;
+  }
+
+  .anand--inner--Container--text--time > p {
+    font-size: clamp(0.72rem, 40% + 0.5rem, 2.5rem);
+    font-weight: bold;
+  }
+
+  .anand--inner--Container--text--venue {
+    font-size: clamp(0.72rem, 20% + 0.7rem, 2.5rem);
+  }
+
+  .anand--inner--Container--text--attire {
+    font-size: clamp(0.72rem, 10% + 0.7rem, 2.5rem);
+  }
+
+  .italicFont {
+    font-size: clamp(0.72rem, 15% + 1.4rem, 2rem);
+    letter-spacing: 2px;
+  }
+  .anandTimeFont {
+    font-size: clamp(0.72rem, 5% + 0.7rem, 1.5rem);
+  }
+}
+
+@media screen and (max-height: 610px) {
+  .anand--upperText {
+    margin-top: 5%;
+  }
+
+  .anand--upperText--bg {
+    width: 80%;
+  }
+
+  .anand--upperText--text {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 70%;
+  }
+
+  .anand--image {
+    width: 30%;
+  }
+
+  .anand--inner--Container {
+    gap: 0.1%;
+  }
+
+  .anand--inner--Container--text--one {
+    font-size: clamp(0.62rem, 5% + 0.5rem, 2.2rem);
+
+    padding-top: 1%;
+  }
+
+  .anand--inner--Container--text--two {
+    font-size: clamp(0.72rem, 0% + 1.6rem, 2.2rem);
+  }
+
+  .anand--inner--Container--text--three {
+    font-size: clamp(0.72rem, 5% + 0.7rem, 2.2rem);
+    padding-bottom: 2%;
+    margin-top: -3%;
+  }
+
+  .anand--inner--Container--text--four {
+    font-size: clamp(0.72rem, 5% + 1.7rem, 3.2rem);
+  }
+
+  .anand--inner--Container--text--date {
+    font-size: clamp(0.72rem, 25% + 1rem, 2.5rem);
+  }
+
+  .anand--inner--Container--text--time {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+  }
+
+  .anand--inner--Container--text--time > p {
+    font-size: clamp(0.72rem, 10% + 0.5rem, 2.5rem);
+    font-weight: bold;
+  }
+
+  .anand--inner--Container--text--venue {
+    font-size: clamp(0.72rem, 5% + 0.6rem, 2.5rem);
+  }
+
+  .anand--inner--Container--text--attire {
+    font-size: clamp(0.62rem, 0% + 0.5rem, 2.5rem);
+  }
+
+  .italicFont {
+    font-size: clamp(0.62rem, 14% + 1.4rem, 2rem);
+    letter-spacing: 2px;
+  }
+  .anandTimeFont {
+    font-size: clamp(0.72rem, 5% + 0.7rem, 1.5rem);
+  }
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (min-width: 500px) {
+  .anand--image {
+    width: 55%;
+    
+  }
+  .anand--inner--Container--text--time {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px 37px;
+  }
+
+  .italicFont {
+    font-size: clamp(0.72rem, 80% + 2.1rem, 3rem);
+  }
+  .anandTimeFont {
+    font-size: clamp(0.72rem, 30% + 0.8rem, 1.5rem);
+  }
+
+  .anand--inner--Container--text--venue {
+    font-size: clamp(0.72rem, 10% + 0.9rem, 2rem);
+  }
+
+  .anand--inner--Container--text--attire {
+    font-size: clamp(0.72rem, 1% + 0.9rem, 2rem);
+    padding-top: 4%;
+  }
+  .anand--upperText--bg {
+    max-width: 500px;
+  }
+
+  .anand--upperText--text {
+    max-width: 450px;
+  }
+
+  .anand--image {
+    max-width: 200px;
+  }
+
+  .anand--inner--Container--text--one {
+    padding-bottom: 1%;
+    padding-top: 1%;
+  }
+
+  .anand--inner--Container--text--two {
+    font-size: clamp(0.72rem, 5% + 2rem, 4.2rem);
+  }
+
+  .anand--inner--Container--text--three {
+    font-size: clamp(0.72rem, 12% + 0.7rem, 2.2rem);
+  }
+
+  .anand--inner--Container--text--four {
+    font-size: clamp(0.72rem, 75% + 1.8rem, 3.2rem);
+  }
+
+  .anand--inner--Container--text--venue {
+    font-size: clamp(0.72rem, 10% + 0.9rem, 2.5rem);
+  }
+
+  .anand--inner--Container--text--attire {
+    font-size: clamp(0.72rem, 1% + 1rem, 2.5rem);
+    padding-top: 1%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .anand--image {
+    width: 55%;
+    max-width: 200px;
+  }
+  .italicFont {
+    font-size: clamp(0.72rem, 80% + 2.1rem, 3rem);
+  }
+  .anandTimeFont {
+    font-size: clamp(0.72rem, 10% + 0.8rem, 1.5rem);
+  }
+
+  .anand--inner--Container--text--venue {
+    font-size: clamp(0.72rem, 10% + 0.9rem, 2rem);
+  }
+
+  .anand--inner--Container--text--attire {
+    font-size: clamp(0.72rem, 1% + 0.9rem, 2rem);
+    padding-top: 4%;
+  }
+}

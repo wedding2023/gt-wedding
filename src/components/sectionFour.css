@@ -1,0 +1,167 @@
+:root {
+  --white: aliceblue;
+}
+
+@font-face {
+  font-family: PyriformTonesNF;
+  src: url("/public/SangeetLunchPage/PyriformTonesNF.ttf");
+}
+
+@font-face {
+  font-family: AlbemarleSwash;
+  src: url("/public/SangeetLunchPage/AlbemarleSwash.ttf");
+}
+@font-face {
+  font-family: Reikna;
+  src: url("/public/SangeetLunchPage/Reikna.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sangeetLunch--wrap {
+  height: 201vh;
+  z-index: 800;
+}
+
+.sangeetLunch {
+  height: 100vh;
+  width: 100vw;
+  max-width: 900px;
+  position: sticky;
+  top: 0;
+  background-image: url("/public/SangeetLunchPage/main--bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.sangeetLunch--bottom--deco--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 35%;
+}
+
+.sangeetLunch--bottom--deco {
+  position: absolute;
+  width: 100%;
+  height: 29.5%;
+  bottom: 0;
+  margin-bottom: -10%;
+  scale: 1.4;
+  z-index: 100;
+
+  background-image: url("/public/SangeetLunchPage/bottom-deco.png");
+  background-position: center 1%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sangeetLunch--upper--deco {
+  width: 100%;
+  z-index: 250;
+  background-image: url("/public/SangeetLunchPage/lantens.png");
+  background-position: center 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 31.5vh;
+}
+
+/* 
+
+*/
+
+.sangeetLunch--poem--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+
+.sangeetLunch--poem {
+  width: 100%;
+  height: 68vh;
+  object-position: center 90%;
+  object-fit: cover;
+  transform: scaleY(1.2);
+}
+
+.sangeetLunch--doors--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 400;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.sangeetLunch--doorL {
+  width: 50%;
+  height: 100%;
+  background-image: url("/public/SangeetLunchPage/doorL.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-size: cover;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  z-index: 410;
+}
+
+.sangeetLunch--doorR {
+  width: 50%;
+  height: 100%;
+  background-image: url("/public/SangeetLunchPage/doorR.png");
+  background-repeat: no-repeat;
+  background-position: 10% center;
+  background-size: cover;
+  transform-origin: right;
+  transform-style: preserve-3d;
+  z-index: 410;
+}
+
+@media screen and (max-height: 759px) {
+  .sangeetLunch--upper--deco {
+    height: 37vh;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .sangeetLunch--upper--deco {
+    height: 37vh;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .sangeetLunch--upper--deco {
+    width: 100%;
+    z-index: 250;
+    background-image: url("/public/SangeetLunchPage/lantens.png");
+    background-position: center 99%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 38.5vh;
+  }
+}

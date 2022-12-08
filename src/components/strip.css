@@ -1,0 +1,37 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.strip--wrap {
+  width: 100vw;
+  max-width: 900px;
+  overflow: hidden;
+  background-color: antiquewhite;
+}
+
+.strip-one {
+  background-image: url("/public/app/strip.jpg");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: contain;
+  height: 5vh;
+  width: 200vw;
+  position: relative;
+  /* transform: translateX(-500px); */
+  transform-origin:90% center;
+  margin-left: -50%;
+}
+/* .strip-two {
+    background-image: url("/public/app/strip.jpg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+    height: 10vh;
+    width: 200vw;
+  } */
+
+/* .strip--one {
+    height: 10vh;
+  } */

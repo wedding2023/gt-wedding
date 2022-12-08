@@ -1,0 +1,365 @@
+@font-face {
+  font-family: Cinzel-Regular;
+  src: url("/public/GalaPage/Cinzel-Regular.ttf");
+}
+@font-face {
+  font-family: Flatlion;
+  src: url("/public/Summary/Flatlion.ttf");
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.perpul {
+  color: #3d0076;
+}
+
+.summaryPage--wrap {
+  height: 100vh;
+}
+
+.summaryPage {
+  height: 100vh;
+  width: 100vw;
+  max-width: 900px;
+  background-image: url("/public/Summary/bg--main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.summary--outerContainer {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 100;
+}
+
+.summary--frameDown {
+  width: 100vw;
+  max-width: 900px;
+  height: 10vh;
+  object-fit: cover;
+  object-position: center 20%;
+  position: absolute;
+  bottom: 0;
+}
+
+.summary--frameUp {
+  width: 100vw;
+  max-width: 900px;
+  height: 25vh;
+  object-fit: cover;
+  object-position: center 10%;
+  position: absolute;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.summary--innerContainer {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 3% 5% 3% 5%;
+  z-index: 120;
+}
+
+.summary--logo {
+  width: 50%;
+  margin-bottom: 7%;
+  max-width: 300px;
+}
+
+.summary--block01,
+.summary--block03 {
+  display: grid;
+  grid-template-columns: repeat(2, 0.55fr) 1.5fr;
+  border-radius: 9px;
+  /* filter: drop-shadow(0.15rem 0.45rem 0.3rem rgba(0, 0, 0, 0.4)); */
+
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  padding: 1%;
+}
+
+.summary--block03--icon {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 20vw;
+  max-width: 90px;
+}
+.summary--block01--icon {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 15vw;
+  max-width: 80px;
+}
+
+.summary--block01--date,
+.summary--block03--date {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 9vw;
+  margin-left: 2vw;
+  max-width: 40px;
+}
+
+.summary--block01--text,
+.summary--block03--text {
+  text-align: center;
+  grid-area: 1 / 3 / 2 / 4;
+  text-transform: uppercase;
+  font-family: Cinzel-Regular;
+  font-size: clamp(0.72rem, 24% + 0.5rem, 1.2rem);
+  line-height: 120%;
+  font-weight: bold;
+}
+
+.summary--arrow {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 90%;
+}
+
+.summary--bottom--text {
+  text-align: center;
+  font-family: Cinzel-Regular;
+  padding-top: 10%;
+  margin-bottom: 10%;
+}
+
+.summary--bottom--text > h3 {
+  font-size: clamp(0.72rem, 4% + 0.8rem, 1.2rem);
+}
+
+.summary--bottom--text > h4 {
+  font-size: clamp(0.72rem, 94% + 2.7rem, 3.9rem);
+  font-weight: 500;
+  font-family: Flatlion;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (max-height: 759px) {
+  .summary--logo {
+    width: 40%;
+    margin-bottom: 4%;
+  }
+
+  .summary--block03--icon {
+    width: 18vw;
+  }
+
+  .summary--block01--icon {
+    width: 14vw;
+  }
+
+  .summary--block01--date,
+  .summary--block03--date {
+    width: 8vw;
+    margin-left: 2vw;
+  }
+
+  .summary--block01--text,
+  .summary--block03--text {
+    font-size: clamp(0.62rem, 14% + 0.5rem, 1.2rem);
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  .summary--arrow {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    width: 97%;
+  }
+
+  .summary--bottom--text {
+    text-align: center;
+    font-family: Cinzel-Regular;
+    padding-top: 10%;
+  }
+
+  .summary--bottom--text > h3 {
+    font-size: clamp(0.72rem, 4% + 0.8rem, 1.2rem);
+  }
+
+  .summary--bottom--text > h4 {
+    font-size: clamp(0.72rem, 94% + 2rem, 2.9rem);
+    margin-bottom: 2vh;
+  }
+  .summary--frameDown {
+    width: 100vw;
+    max-width: 900px;
+    height: 12vh;
+    object-fit: cover;
+    object-position: center 20%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .summary--frameUp {
+    width: 100vw;
+    max-width: 900px;
+    height: 15vh;
+    object-fit: cover;
+    object-position: center 10%;
+    position: absolute;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+}
+
+@media screen and (max-height: 610px) {
+  .summary--logo {
+    width: 40%;
+    margin-bottom: 5%;
+    opacity: 0.85;
+  }
+
+  .summary--block03--icon {
+    width: 18vw;
+  }
+  .summary--block01--icon {
+    width: 12vw;
+  }
+
+  .summary--block01--date,
+  .summary--block03--date {
+    width: 8vw;
+    margin-left: 2vw;
+  }
+
+  .summary--block01--text,
+  .summary--block03--text {
+    font-size: clamp(0.6rem, 4% + 0.5rem, 1.2rem);
+    line-height: 110%;
+  }
+
+  .summary--arrow {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 97%;
+  }
+
+  .summary--bottom--text {
+    text-align: center;
+    font-family: Cinzel-Regular;
+    padding-top: 10%;
+  }
+
+  .summary--bottom--text > h3 {
+    font-size: clamp(0.72rem, 4% + 0.6rem, 1.2rem);
+  }
+
+  .summary--bottom--text > h1 {
+    font-size: clamp(0.72rem, 34% + 0.7rem, 2.2rem);
+  }
+}
+
+/* 
+
+
+\\
+
+*/
+
+@media screen and (min-width: 500px) {
+  .summary--logo {
+    width: 35%;
+    margin-bottom: 1%;
+    max-width: 300px;
+  }
+  .summary--bottom--text > h3 {
+    font-size: clamp(0.72rem, 10% + 1rem, 1.6rem);
+  }
+
+  .summary--bottom--text > h4 {
+    font-size: clamp(0.72rem, 94% + 3.5rem, 44.9rem);
+  }
+
+  .summary--block01--text,
+  .summary--block03--text {
+    font-size: clamp(0.72rem, 4% + 0.6rem, 1.5rem);
+  }
+  .summary--arrow {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .summary--logo {
+    width: 30%;
+    margin-bottom: 1%;
+    max-width: 300px;
+  }
+  .summary--bottom--text > h3 {
+    font-size: clamp(0.72rem, 10% + 1rem, 1.6rem);
+  }
+
+  .summary--bottom--text > h4 {
+    font-size: clamp(0.72rem, 94% + 3.5rem, 44.9rem);
+  }
+
+  .summary--block01--text,
+  .summary--block03--text {
+    font-size: clamp(0.72rem, 4% + 0.7rem, 1.5rem);
+  }
+  .summary--arrow {
+    margin-top: 2%;
+    margin-bottom: 3%;
+  }
+
+  .summary--frameDown {
+    height: 10vh;
+    object-position: center 10%;
+  }
+
+  .summary--frameUp {
+    height: 20vh;
+    object-position: center 10%;
+  }
+
+  .summary--block03--icon {
+    grid-area: 1 / 1 / 2 / 2;
+    max-width: 90px;
+  }
+  .summary--block01--icon {
+    grid-area: 1 / 1 / 2 / 2;
+    max-width: 60px;
+  }
+
+  .summary--block01--date,
+  .summary--block03--date {
+    max-width: 40px;
+  }
+}

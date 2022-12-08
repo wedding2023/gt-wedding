@@ -1,0 +1,27 @@
+.MusicButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 50px;
+  z-index: 1000;
+  display: flex;
+  background-color: #542451;
+  border: 2px solid #eeb713;
+  width: 20vw;
+  max-width: 120px;
+  align-items: center;
+  justify-content: flex-start;
+  transform-origin: 100% 90%;
+  overflow: hidden;
+}
+
+.musicbuttonImg {
+  width: 9vw;
+  max-width: 55px;
+  margin: 5px;
+}
+
+.MusicButton[data-issoundplaying="true"] {
+  justify-content: flex-end;
+}
+

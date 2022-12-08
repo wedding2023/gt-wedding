@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G'sCupofT</title>
+
+  <link rel="icon" type="image/png" href="./public/app/logo.png" />
+
+  <meta property="og:title" content="G'sCupofT" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./app/icon.jpg"/>
+  <meta property="og:description" content="G'sCupofT" />
+
+
+  <meta name="twitter:title" content="G'sCupofT">
+  <meta name="twitter:image" content="./app/icon.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <!-- Lodingpage and Rotate Screen styling -->
+  <style>
+    @font-face {
+      font-family: AlbemarleSwash;
+      src: url("/public/SangeetLunchPage/AlbemarleSwash.ttf");
+    }
+
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+
+    #loading {
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(#af5fd9, #7953ae);
+      position: fixed;
+      top: 0;
+      z-index: 10000;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      place-content: center;
+      place-items: center;
+      gap: 5%;
+
+    }
+
+    .loading--logo {
+      width: 50%;
+      max-width: 550px;
+    }
+
+    .loading--outer--container {
+      display: flex;
+      flex-direction: column;
+      gap: 5vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading--container {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    .loader {
+      width: 4vmax;
+      max-width: 40px;
+      height: 4vmax;
+      max-height: 40px;
+      border-radius: 50%;
+      display: flex;
+      border-top: 3px solid #e7d190;
+      border-right: 3px solid transparent;
+      box-sizing: border-box;
+      animation: rotation 0.75s linear infinite;
+      margin-top: 5%;
+
+    }
+
+    .loading--img {
+      width: 100vw;
+      max-width: 600px;
+      object-fit: cover;
+      object-position: center 0%;
+
+    }
+
+
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading--text {
+      color: #e7d190;
+      font-family: AlbemarleSwash;
+      line-height: 170%;
+      margin-top: 5%;
+    }
+
+    #space {
+      height: 100vh;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    #rotateScreen {
+      background-image: linear-gradient(#af5fd9, #7953ae);
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000000;
+      flex-direction: column;
+    }
+
+    #rotateScreen > p {
+      font-size: clamp(0.72rem, 20% + 1.2rem, 2.2rem);
+      font-family: AlbemarleSwash;
+      color: #d8ab23;
+    }
+
+
+    @media screen and (max-width:500px) {
+      .loading--logo {
+        max-width: 400px;
+      }
+
+    }
+
+    @media (orientation:portrait) {
+      #rotateScreen {
+        display: none !important;
+      }
+    }
+
+    @media (orientation: landscape) {
+      #rotateScreen {
+        display: flex !important;
+      }
+    }
+  </style>
+  <!-- Loading page to Js App transition -->
+  <script>
+    window.onload = function () { loading() };
+
+
+    function loading() {
+      console.log("loaded")
+      setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("space").style.display = "none";
+      }, 3500);
+    }
+
+  </script>
+
+  <!-- Lottifiles -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body onload="loading()">
+
+
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loading--outer--container">
+      <img src="/public/app/logo.png" class="loading--logo" alt="logo">
+
+      <div class="loading--container">
+        <div class="loader"></div>
+        <h1 class="loading--text">Loading...</h1>
+      </div>
+    </div>
+    <img src="/public/app/tamanna-transparent.png" alt="" class="loading--img">
+  </div>
+
+  <!-- Rotate phone screen -->
+  <div id="rotateScreen">
+    <lottie-player src="https://lottie.host/7b6fb0cb-d973-40b9-b341-6d2cd1fc4974/iHtX5dbeea.json" background="transparent" speed="1"
+      style="width: 50vh; height: 50vh; max-width: 400px; max-height: 400px; " loop autoplay></lottie-player>
+
+      <p>Rotate Your Phone</p>
+  </div>
+
+  <!-- PlaceHolder until loading -->
+  <div id="space"></div>
+
+
+  <!-- Js App-->
+  <div id="root"></div>
+
+
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

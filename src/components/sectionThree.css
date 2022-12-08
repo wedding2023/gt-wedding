@@ -1,0 +1,519 @@
+@font-face {
+  font-family: Cinzel-Decorative-Bold;
+  src: url("/public/GalaPage/CinzelDecorative-Bold.ttf");
+}
+@font-face {
+  font-family: Better-Saturday;
+  src: url("/public/GalaPage/Better-Saturday.otf");
+}
+@font-face {
+  font-family: ErasLightITC;
+  src: url("/public/GalaPage/ErasLightITC.ttf");
+}
+@font-face {
+  font-family: Cinzel-Regular;
+  src: url("/public/GalaPage/Cinzel-Regular.ttf");
+}
+
+@font-face {
+  font-family: GoodVibesCyr;
+  src: url("/public//GalaPage/GoodVibesCyr.ttf");
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.sangeet--wrap {
+  width: 100vw;
+  max-width: 900px;
+  height: 250vh;
+}
+
+.sangeet {
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  /* overflow: hidden; */
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+*/
+.sangeet--outer--container {
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  width: 100vw;
+  max-width: 900px;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 900;
+  background-color: #20002f;
+  justify-items: center;
+  justify-content: center;
+}
+
+.gala--faiyLights {
+  width: 100vw;
+  max-width: 900px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+
+.gala--stage--container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  place-items: center;
+}
+
+.gala--stage {
+  background-image: url("/public/GalaPage/stage.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 120vw;
+  height: 100%;
+  transform-origin: center 52%;
+  z-index: 450;
+  display: block;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.gala--couple {
+  width: 20vw;
+  display: block;
+  transform-origin: center;
+  z-index: 500;
+  grid-area: 1 / 1 / 2 / 2;
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+
+*/
+.sangeet--inner--container {
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 800;
+}
+
+.bg-img {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  max-width: 900px;
+  height: 100vh;
+  transform-origin: center 45%;
+}
+
+.decoration--bg {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 150;
+  display: flex;
+  max-width: 900px;
+}
+
+.decoration--container {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  width: 100vw;
+  gap: 10%;
+}
+
+.decoration--bg--right {
+  display: flex;
+  width: 45%;
+  height: 30vh;
+}
+.decoration--bg--left {
+  width: 45%;
+  height: 30vh;
+  /* display: none; */
+}
+
+.text--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 105vh;
+  position: relative;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: center;
+}
+
+.text--container--uperText {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+.text--container--uperText > h6 {
+  color: rgb(255, 255, 255);
+  font-size: clamp(0.9rem, 1% + 0.9rem, 2.2rem);
+  font-family: Cinzel-Decorative-Bold;
+  text-shadow: 0px 3px 119.54px rgba(33, 34, 65, 0.004);
+}
+
+.text--container--topic {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+  padding-top: 8%;
+  padding-bottom: 5%;
+}
+
+.text--container--topic > h1 {
+  font-size: clamp(0.9rem, 90% + 3rem, 5.2rem);
+  font-family: Better-Saturday;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: 2px 2px 30px #e2dada;
+  opacity: 0.85;
+}
+
+.text--container--subtopic {
+  width: 100%;
+  text-align: center;
+  font-family: Cinzel-Regular;
+  padding-bottom: 2%;
+}
+
+.text--container--subtopic > h5 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 3px 119.54px rgba(33, 34, 65, 0.004);
+  font-size: clamp(0.9rem, 1% + 1rem, 3.2rem);
+  margin-top: 0.1%;
+}
+
+.text--container--date {
+  padding-bottom: 3%;
+  width: 100%;
+  text-align: center;
+}
+
+.text--container--date > h5 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 3px 119.54px rgba(33, 34, 65, 0.004);
+  font-family: Cinzel-Decorative-Bold;
+  font-size: clamp(0.9rem, 95% + 1.2rem, 3.2rem);
+}
+
+.text--container--events {
+  width: 100%;
+  text-align: center;
+  font-family: Cinzel-Regular;
+  padding-bottom: 4%;
+}
+
+.text--container--events > h5 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 3px 119.54px rgba(33, 34, 65, 0.004);
+  font-size: clamp(0.9rem, 10% + 1rem, 3.2rem);
+  margin-top: 0.1%;
+}
+
+.text--container--events > h6 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 3px 119.54px rgba(33, 34, 65, 0.004);
+  font-size: clamp(0.7rem, 20% + 0.7rem, 2rem);
+  font-weight: normal;
+  margin-top: 2%;
+}
+
+.bottomSpace {
+  margin-bottom: 4%;
+}
+
+.text--container--deco {
+  width: 95%;
+  max-width: 450px;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+.text--container--attire {
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.text--container--attire > h5 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 3px 119.54px rgba(33, 34, 65, 0.004);
+  font-size: clamp(0.6rem, 5% + 1rem, 2rem);
+  font-family: ErasLightITC;
+  font-weight: lighter;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (min-width: 850px) {
+  .sangeet--inner--container {
+    max-width: 900px;
+    align-self: center;
+  }
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (max-height: 759px) {
+  .text--container--uperText {
+    padding-bottom: 2%;
+  }
+
+  .text--container--uperText > h6 {
+    font-size: clamp(0.1rem, 10% + 0.8rem, 1.2rem);
+  }
+
+  .text--container--topic {
+    padding-top: 3%;
+    padding-bottom: 1%;
+  }
+
+  .text--container--topic > h1 {
+    font-size: clamp(0.9rem, 70% + 2.5rem, 4.2rem);
+  }
+
+  .text--container--subtopic {
+    padding-bottom: 4%;
+  }
+
+  .text--container--subtopic > h5 {
+    font-size: clamp(0.9rem, 10% + 1rem, 3.2rem);
+  }
+
+  .text--container--date {
+    padding-bottom: 3%;
+  }
+
+  .text--container--date > h5 {
+    font-size: clamp(0.9rem, 65% + 1rem, 3.2rem);
+  }
+
+  .text--container--events {
+    padding-bottom: 4%;
+  }
+
+  .text--container--events > h5 {
+    font-size: clamp(0.9rem, 10% + 1rem, 3rem);
+  }
+
+  .text--container--events > h6 {
+    font-size: clamp(0.7rem, 20% + 0.6rem, 2rem);
+  }
+
+  .text--container--deco {
+    padding-top: 5%;
+    padding-bottom: 10%;
+  }
+
+  .text--container--attire > h5 {
+    font-size: clamp(0.6rem, 5% + 1rem, 2rem);
+  }
+}
+
+/* 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (max-height: 610px) {
+  .text--container--uperText {
+    padding-bottom: 2%;
+  }
+
+  .text--container--uperText > h6 {
+    font-size: clamp(0.1rem, 1% + 0.8rem, 1.2rem);
+  }
+
+  .text--container--topic {
+    padding-top: 4%;
+    padding-bottom: 0.1%;
+  }
+
+  .text--container--topic > h1 {
+    font-size: clamp(0.9rem, 40% + 2.5rem, 4.2rem);
+  }
+
+  .text--container--date {
+    padding-bottom: 1%;
+  }
+
+  .text--container--date > h5 {
+    font-size: clamp(0.9rem, 5% + 1rem, 3.2rem);
+  }
+
+  .text--container--events {
+    padding-bottom: 2%;
+  }
+
+  .text--container--events > h5 {
+    font-size: clamp(0.9rem, 10% + 0.9rem, 2rem);
+  }
+
+  .text--container--events > h6 {
+    font-size: clamp(0.7rem, 0.9% + 0.75rem, 2rem);
+  }
+
+  .text--container--deco {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .text--container--attire > h5 {
+    font-size: clamp(0.6rem, 10% + 0.9rem, 2rem);
+  }
+}
+
+/* 
+
+
+
+*/
+
+@media screen and (min-width: 500px) {
+  .gala--faiyLights {
+    height: 20vh;
+    object-position: center 90%;
+  }
+
+  .gala--stage--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
+  }
+
+  .gala--stage {
+    width: 70vw;
+    transform-origin: center 52%;
+  }
+
+  .gala--couple {
+    width: 10vw;
+    display: block;
+    transform-origin: center;
+    z-index: 500;
+  }
+
+  .text--container--topic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    padding-top: 8%;
+    padding-bottom: 5%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+}
